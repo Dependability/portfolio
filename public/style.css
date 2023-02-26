@@ -1,4 +1,10 @@
 /* General */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Mynerve&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Hind', sans-serif;
+}
 h2, h1, p, a, body{
     margin: 0;
     padding: 0;
@@ -16,16 +22,16 @@ a, a:visited, a:link {
 } 
 
 /* Header */
-header a:after {
+header .right a:after {
     display:block;
     content: '';
-    border-bottom: solid 2px green;  
+    border-bottom: solid 2px #72B626;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
 
-header a:hover {
-    color: green;
+header .right a:hover {
+    color: #72B626;
    
 }
 header a:hover:after {
@@ -33,7 +39,7 @@ header a:hover:after {
 }
 
 header .title:hover {
-    color:green;
+    color:#72B626;
 }
 header {
     position: fixed;
@@ -46,6 +52,7 @@ header {
 header .title {
     cursor: pointer;
     font-size: 40px;
+    font-family: 'Mynerve', serif;
 }
 
 header .inner {
@@ -66,6 +73,111 @@ header .right {
     font-size: 20px;
 }
 
+header .menu {
+    background-color: rgba(0,0,0,.05);
+    width: 24px;
+    padding: 10px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px #00000000 solid;
+    cursor: pointer;
+    display: none;
+}
+
+header .menu:hover {
+    border-color: #72B626;
+}
+
+header .menu svg {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+header .navMenuOverlay {
+    /* display: none; */
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    background-color: #00000060;
+    backdrop-filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+header .navMenuOverlay .menuInner {
+    margin: 10px 30px 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    width: 300px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 600;
+
+}
+
+.navMenuOverlay .menuInner a {
+    width: fit-content;
+    
+}
+
+.navMenuOverlay .menuInner .line {
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+}
+
+.navMenuOverlay .menuInner a:hover {
+    color: #72B626;
+}
+
+.navMenuOverlay .menuInner svg {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    right: 10px;
+
+}
+@media (max-width: 1300px) {
+    header .inner {
+        width: 80vw;
+        
+    }
+
+    
+
+    
+}
+
+@media (max-width: 750px) {
+    header .right {
+        display: none;
+        
+    }
+    header .menu, header .navMenuOverlay {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    header .navMenuOverlay .menuInner {
+        width: 75vw;
+        margin: 10px auto 0;
+        
+    }
+}
+@media (max-width: 475px) {
+    header .inner {
+        width: 90vw;
+    }
+    
+}
 /* HOME */
 
 
@@ -82,25 +194,36 @@ header .right {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: black;
-    border: 5px grey solid;
+    border: 5px solid rgba(229, 231, 235);
     margin-bottom: 15px;    
+    object-fit: cover;
+    object-position: 0px -30px;  
 }
 
+
 .home h1 {
+    text-align: center;
     font-size: 72px;
+    margin: 10px;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .home .intro {
     font-size: 25px;
+    margin: 5px;
+    color: #72B626;
+    line-height: 1;
+    font-weight: 600;
 }
 
 .home .short {
-    width: 700px;
+    max-width: 700px;
     font-size: 20px;
     text-align: center;
     line-height: 1.4;
 }
+
 
 /* ABOUT */
 .about {
@@ -109,16 +232,24 @@ header .right {
 }
 .about .title {
     margin-top: 40px;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
 .about .title h2, .technologies h2{
     font-size: 45px;
+    font-weight: 600;
     text-align: center;
 }
 
 .technologies h2 {
     margin-top: 20px;
+    font-weight: 600;
+}
+
+.technologies h2 .green {
+    color: #72B626;
+    
 }
 .description p{
     font-size: 20px;
@@ -131,19 +262,42 @@ header .right {
 }
 .description a {
     font-weight: bold;
-    color: green;
+    color: #72B626;
 }
 .description a:hover {
     text-decoration: underline;
 }
 
 .description p.tech-desc {
+
     margin-bottom: 0;
-    font-weight: bold;
+    font-weight: 600;
 }
 .description br {
     display: block;
     height: 20px;
+}
+
+.skills {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.skillItem {
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.skillItem img {
+    height: 125px;
+    width: 125  px;
 }
 
 /* Projects */
@@ -153,31 +307,74 @@ header .right {
     margin-bottom: 20px;
 }
 
+@media (max-width: 1250px) {
+    .projects {
+        width: 90vw;
+    }
+}
+
+
+
 .project-item {
     font-size: 20px;
     display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
 }
 .projects .left {
-    width: 500px;
+    min-width: 500px;
+    max-width: 550px;
 }
 
+
+
+
+.projects img {
+    height: 216px;
+    width: calc((216px * 16)/9);
+    border: 1px #00000030 solid;
+}
+.projects .buttons {
+    margin-top: 8px;
+    display: flex;
+    gap: 15px;
+}
 .projects .buttons a {
-    padding: 10px;
+    
+    padding: 4px 25px;
+    font-weight: 600;
     border: 2px solid grey;
     border-radius: 9999px;
     background-color: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: grey;
     transition: color 200ms, background-color 200ms;
 }
 
+.projects .tech {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.projects .desc {
+    font-size: 18px;
+}
+
+.projects .green {
+    color: #72B626;
+}
+
 .buttons a.live {
-    color: green;
-    border-color: green;
+    color: #72B626;
+    border-color: #72B626;
 }
 
 .projects .buttons a.live:hover {
     color: white;
-    background-color: green;
+    background-color: #72B626;
 }
 
 .projects .buttons a:hover {
@@ -193,13 +390,41 @@ header .right {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.projects h2 {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 1000px) {
+
+    .project-item {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 90px;
+        
+    }
+
+    .project-item img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .project-item .left {
+        width: 80vw;
+        min-width: auto;
+        max-width: none;
+    }
 }
 
 
 /* footer */
 .footer {
     height: 150px;
-    background-color: grey;
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: inset 2px 0px 8px rgba(0,0,0,.1);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -233,5 +458,5 @@ header .right {
 
 }
 .links svg:hover {
-    fill: green;
+    fill: #72B626;
 }

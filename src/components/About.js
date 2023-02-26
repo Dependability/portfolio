@@ -1,6 +1,33 @@
 import Layout from './Layout';
-
+import css3 from '../assets/icons/css3.png';
+import express from '../assets/icons/express.png';
+import firebase from '../assets/icons/firebase.png';
+import git from '../assets/icons/git.png';
+import html5 from '../assets/icons/html5.png';
+import javascript from '../assets/icons/javascript.png';
+import mongodb from '../assets/icons/mongodb.png';
+import node from '../assets/icons/node.png';
+import python from '../assets/icons/python.png';
+import react from '../assets/icons/react.png';
+import webpack from '../assets/icons/webpack.png';
+import mongoose from '../assets/icons/mongoose.png'
 function About() {
+
+    const skills = [
+        {'name': 'HTML','src': html5},
+        {'name': 'CSS','src': css3},
+        {'name': 'Javascript','src': javascript},
+        {'name': 'Python','src': python},
+        {'name': 'React','src': react},
+        {'name': 'Node','src': node},
+        {'name': 'Express','src': express},
+        {'name': 'MongoDB','src': mongodb},
+        {'name': 'Firebase','src': firebase},
+        {'name': "Git",'src': git},
+        {'name': 'Webpack','src': webpack},
+        {name: 'Mongoose', src: mongoose}
+
+    ]
     return <Layout>
         <div className='about'>
             <div className='title'>
@@ -31,8 +58,16 @@ function About() {
             </div>
             <hr></hr>
             <div className='technologies'>
-                <h2>Skills & Tools</h2>
-                {/* go through a list to display alot of them */}
+                <h2>Skills <span className='green'>& Tools</span></h2>
+                <div className='skills'>
+                    {skills.map(({name, src}, index)=> {
+                        return <div className='skillItem' key={index}>
+                            <img src={src} alt='' />
+                            <span className='name'>{name}</span>
+                            </div>
+                    })}
+                </div>
+                
             </div>
         </div>
     </Layout>
