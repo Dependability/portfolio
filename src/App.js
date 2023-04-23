@@ -5,7 +5,7 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='porfolio'>
       <Routes>
         <Route exact path='/' element={<Home />}></Route>
         <Route exact path='/about' element={<About />}></Route>
