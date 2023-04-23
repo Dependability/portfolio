@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.823ebdb0.js",
+    "static/media/waldo.png": "/portfolio/static/media/waldo.c74b696ac0e9fc1295f2.png",
+    "static/media/profile.JPG": "/portfolio/static/media/profile.86664b60ffb67eb657e7.JPG",
+    "static/media/myTube.png": "/portfolio/static/media/myTube.3eae6e63ec801102f120.png",
+    "static/media/Tic-Tac-Toe.png": "/portfolio/static/media/Tic-Tac-Toe.d925f161bda2ef6824c1.png",
+    "static/media/Knight-Travails.png": "/portfolio/static/media/Knight-Travails.5d583407b761823b9a9f.png",
+    "static/media/battleship.png": "/portfolio/static/media/battleship.7e3ef098e1aacfc99d65.png",
+    "index.html": "/portfolio/index.html",
+    "main.823ebdb0.js.map": "/portfolio/static/js/main.823ebdb0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.823ebdb0.js"
+  ]
+}
