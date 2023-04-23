@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Portfolio
+
+This is the portfolio of Seyi Bakare, an aspiring full-stack developer!
+
+👉[LIVE DEMO](https://dependability.github.com/portfolio)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
