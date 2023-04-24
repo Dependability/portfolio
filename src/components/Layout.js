@@ -1,5 +1,6 @@
 import Header from './Header';
-import Footer from './Footer'
+import Footer from './Footer';
+import '../styles/style.css';
 
 function Layout (props) {
 
