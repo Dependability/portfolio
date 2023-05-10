@@ -7,7 +7,7 @@ function Header() {
     const [showMenu, setMenu] = useState(false);
     return <header>
         <div className="inner">
-        <h2 className='title' onClick={()=> {navigate(process.env.PUBLIC_URL + '/')}}>Seyi</h2>
+        <h2 className='title' onClick={()=> {navigate('/')}}>Seyi</h2>
         <div className='right'>
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
