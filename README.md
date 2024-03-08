@@ -2,7 +2,7 @@
 
 This is the portfolio of Seyi Bakare, an aspiring full-stack developer!
 
-👉[LIVE DEMO](https://dependability.github.com/portfolio)
+👉[LIVE DEMO](https://dependability.github.io/portfolio)
 
 ## Getting Started with Create React App
 
