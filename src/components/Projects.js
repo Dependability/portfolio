@@ -64,7 +64,7 @@ const projectList = [{
     title: "Member's Only",
     tech: ['Node.js', 'Express.js', 'Heroku', 'CSS', 'Javascript', 'EJS'],
     desc: "A site that is exclusive to member's only! This site is served solely by a back-end. The back end is express and provides the necessary html, css, and javascript for the site to funciton. Express uses EJS as the view to set up the HTML.",
-    live: 'https://blooming-thicket-38738.herokuapp.com',
+    live: 'https://members-only-production-a2e6.up.railway.app',
     source: 'https://www.github.com/Dependability/members-only',
     preview: membersonly
 },{
